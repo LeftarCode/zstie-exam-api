@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{e2a761dc-8063-43f3-bd0a-8abcb6efa039}</ProjectGuid>
+    <ProjectHome />
+    <ProjectView>ShowAllFiles</ProjectView>
+    <StartupFile>index.js</StartupFile>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <ItemGroup>
+    <Compile Include="app\models\database\verification-code.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\models\dto\question\dto-create-question.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\models\dto\user\dto-create-verification-code.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\models\response\user\user-simple-model.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\models\response\user\verification-code-simple-model.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="migrations\20180526114611-create-verification-code-table.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="package-lock.json" />
+    <Content Include="package.json" />
+    <Content Include="docker-compose.yml" />
+    <Compile Include="index.js" />
+    <Compile Include="app\app.js" />
+    <Compile Include="migrations\201803013153131-create-users-table.js" />
+    <Compile Include="migrations\20180307141414-create-questions-table.js" />
+    <Compile Include="migrations\20180307155454-create-exams-table.js" />
+    <Compile Include="migrations\20180313121212-create-answers-table.js" />
+    <Compile Include="migrations\20180319101515-create-qualifications-table.js" />
+    <Compile Include="app\config\database.js" />
+    <Compile Include="app\config\defaults.js" />
+    <Compile Include="app\config\environment-variables.js" />
+    <Compile Include="app\controllers\exam-controller.js" />
+    <Compile Include="app\controllers\qualification-controller.js" />
+    <Compile Include="app\controllers\questions-controller.js" />
+    <Compile Include="app\controllers\user-controller.js" />
+    <Compile Include="app\middlewares\authorization.js" />
+    <Compile Include="app\services\exam-service.js" />
+    <Compile Include="app\services\qualification-service.js" />
+    <Compile Include="app\services\questions-service.js" />
+    <Compile Include="app\services\user-service.js" />
+    <Compile Include="app\constants\errors\authorization-errors.js" />
+    <Compile Include="app\constants\errors\exams-errors.js" />
+    <Compile Include="app\constants\errors\qualifications-errors.js" />
+    <Compile Include="app\constants\errors\questions-errors.js" />
+    <Compile Include="app\constants\errors\users-errors.js" />
+    <Compile Include="app\models\database\answer.js" />
+    <Compile Include="app\models\database\exam.js" />
+    <Compile Include="app\models\database\qualification.js" />
+    <Compile Include="app\models\database\question.js" />
+    <Compile Include="app\models\database\user.js" />
+    <Compile Include="app\models\service-results\service-results.js" />
+    <Compile Include="app\models\dto\exam\dto-get-exam.js" />
+    <Compile Include="app\models\dto\exam\dto-send-exam.js" />
+    <Compile Include="app\models\dto\question\dto-get-question-list.js" />
+    <Compile Include="app\models\dto\user\dto-create-user.js" />
+    <Compile Include="app\models\dto\user\dto-login-user.js" />
+    <Compile Include="app\models\response\exam\exam-question-simple-model.js" />
+    <Compile Include="app\models\response\exam\exam-simple-model.js" />
+    <Compile Include="app\models\response\exam\exam-submit-model.js" />
+    <Compile Include="app\models\response\exam\exam-ultra-simple-model.js" />
+    <Compile Include="app\models\response\qualification\qualification-simple-model.js" />
+    <Compile Include="app\models\response\user\user-login-simple-model.js" />
+    <Compile Include="app\utilities\database\index.js" />
+    <Compile Include="app\utilities\express\index.js" />
+    <Compile Include="app\utilities\express\send-errors.js" />
+    <Compile Include="app\utilities\security\security-utilities.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app" />
+    <Folder Include="app\config" />
+    <Folder Include="app\constants" />
+    <Folder Include="app\constants\errors" />
+    <Folder Include="app\controllers" />
+    <Folder Include="app\middlewares" />
+    <Folder Include="app\models" />
+    <Folder Include="app\models\database" />
+    <Folder Include="app\models\dto" />
+    <Folder Include="app\models\dto\exam" />
+    <Folder Include="app\models\dto\question" />
+    <Folder Include="app\models\dto\user" />
+    <Folder Include="app\models\response" />
+    <Folder Include="app\models\response\exam" />
+    <Folder Include="app\models\response\qualification" />
+    <Folder Include="app\models\response\question" />
+    <Folder Include="app\models\response\user" />
+    <Folder Include="app\models\service-results" />
+    <Folder Include="app\services" />
+    <Folder Include="app\utilities" />
+    <Folder Include="app\utilities\database" />
+    <Folder Include="app\utilities\express" />
+    <Folder Include="app\utilities\security" />
+    <Folder Include="migrations" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

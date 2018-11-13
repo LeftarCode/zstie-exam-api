@@ -1,0 +1,19 @@
+'use strict';
+
+class QuestionSimpleModel {
+  /**
+   *
+   * @param {*} model - model
+   * @param {String} model.id - question id
+   * @param {String} model.content - question content
+   * @param {Array<String>} model.answers - question answers
+   */
+  constructor(model) {
+    this.id = model.id;
+    this.question = model.content;
+    this.answers = model.answers;
+    this.imageUrl = model.imageUrl;
+  }
+}
+
+module.exports = QuestionSimpleModel;

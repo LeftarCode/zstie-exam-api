@@ -18,7 +18,7 @@
     "jsonwebtoken": "^8.2.0",
     "lusca": "^1.5.2",
     "pg": "^7.4.1",
-    "sequelize": "^4.35.2",
+    "sequelize": "^5.15.1",
     "umzug": "^2.1.0"
   }
 }
